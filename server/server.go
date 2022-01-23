@@ -1,4 +1,4 @@
-package paperclipserver
+package server
 
 import (
     "context"
