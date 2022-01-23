@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package twirp.accounts;
+option go_package = "rpc";
+
+// Service checks if account is linked .. push reward to account
+service AccountsService {
+  rpc PushToAccount(AccountDropsRequest) returns (AccountDropsResponse); 
+
+  rpc IsAccountLinked(AccountLookupRequest) returns (AccountLookupResponse);
+}
+
+message AccountDropsRequest {
+    string id = 1;
+    string game = 2;
+
+
+}
+
+message AccountDropsResponse { 
+    string item = 1;
+ } 
+
+
+
+message AccountLookupRequest {
+    string platform = 1;
+    string platformID = 2;
+}
+
+message AccountLookupResponse {
+    string accountID = 1;
+}
+
+
+
+message Empty {}
