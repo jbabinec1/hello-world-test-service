@@ -8,14 +8,15 @@ import (
 
 // Server implements the UniversalPaperclips service
 type Server struct {
-    
+   
+	AccountLookupResponse string
 	
 }
 
 // NewServer creates an instance of our server
 func NewServer() *Server {
     return &Server{
-        
+       AccountLookupResponse: "jared",
     }
 }
 
