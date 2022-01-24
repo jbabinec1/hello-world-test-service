@@ -27,13 +27,4 @@ func (s *Server) IsAccountLinked(ctx context.Context, accountReq *pb.AccountLook
 }
 
 
-// CalculateUniverseLifespan calulcates the universe's lifespan and returns some marginally relaxing value
-/*  func (s *Server) CalculateUniverseLifespan(ctx context.Context, empty *pb.Empty) (*pb.Dread, error) {
-    return &pb.Dread{
-        Paperclips:       s.PaperClips,
-        UniverseLifespan: "42",
-    }, nil */
-
-
-
 }
