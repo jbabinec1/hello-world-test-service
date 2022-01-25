@@ -17,7 +17,8 @@ RUN go get github.com/jbabinec1/hello-world-test-service
 
 RUN cd /build && git clone https://github.com/jbabinec1/hello-world-test-service.git
 
-RUN cd /build/hello-world-test-service && go build
+##RUN cd /build/hello-world-test-service && go build
+RUN cd /build/hello-world-test-service
 
 # Run the outyet command by default when the container starts.
 #CMD ["go", "run", "main.go"]
