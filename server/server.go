@@ -14,6 +14,8 @@ type Server struct {
 }
 
 var request
+var response
+var ctx
 
 // NewServer creates an instance of our server
 func NewServer() *Server {
