@@ -16,16 +16,21 @@ type Server struct {
 // NewServer creates an instance of our server
 func NewServer() *Server {
     return &Server{
-       AccountLookupResponse: "jared",
+       //AccountLookupResponse: "jared",
     }
 }
 
-// GetPaperclips returns the current paperclip count
-func (s *Server) IsAccountLinked(ctx context.Context, accountReq *pb.AccountLookupRequest) (*pb.AccountLookupResponse, error) {
+
+func (s *Server) IsAccountLinked(ctx context.Context, req *pb.AccountLookupRequest) (*pb.AccountLookupResponse, error) {
     return &pb.AccountLookupResponse{
-        items: "cool item",
+        AccountID: "jared",
     }, nil
-}
+} 
 
 
+func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (*pb.AccountDropsResponse, error) {
+    
+    return &pb.AccountDropsResponse {
+		Item: "noob_weapon",
+	}, nil
 }

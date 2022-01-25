@@ -16,6 +16,5 @@ func main() {
 
 	server := server.NewServer()
 	twirpHandler := rpc.NewAccountsServiceServer(server, nil)
-    fmt.Println(twirpHandler)
 	log.Fatal(http.ListenAndServe(":6666", twirpHandler))
 }
