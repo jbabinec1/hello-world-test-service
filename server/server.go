@@ -13,9 +13,9 @@ type Server struct {
 
 }
 
-var request
-var response
-var ctx
+//var request
+//var response
+//var ctx
 
 // NewServer creates an instance of our server
 func NewServer() *Server {
@@ -25,14 +25,14 @@ func NewServer() *Server {
 }
 
 
-func (s *Server) IsAccountLinked(ctx context.Context, request *pb.AccountLookupRequest) (response *pb.AccountLookupResponse, err error) {
+func (s *Server) IsAccountLinked(ctx context.Context, *pb.AccountLookupRequest) (response *pb.AccountLookupResponse, err error) {
     return &pb.AccountLookupResponse{
         AccountID: "jared",
     }, nil
 }
 
 
-func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (response *pb.AccountDropsResponse, err error) {
+func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (*pb.AccountDropsResponse, err error) {
     return &pb.AccountDropsResponse {
 		Item: "noob_weapon",
 	}, nil
