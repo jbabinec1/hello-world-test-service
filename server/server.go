@@ -25,7 +25,7 @@ func NewServer() *Server {
 }
 
 
-func (s *Server) IsAccountLinked(ctx context.Context, *pb.AccountLookupRequest) (response *pb.AccountLookupResponse, err error) {
+func (s *Server) IsAccountLinked(ctx context.Context, request *pb.AccountLookupRequest) (*pb.AccountLookupResponse, err error) {
     return &pb.AccountLookupResponse{
         AccountID: "jared",
     }, nil
