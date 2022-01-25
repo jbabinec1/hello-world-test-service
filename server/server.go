@@ -23,14 +23,14 @@ func NewServer() *Server {
 }
 
 
-func (s *Server) IsAccountLinked(ctx context.Context, request *pb.AccountLookupRequest) (*pb.AccountLookupResponse, error) {
+func (s *Server) IsAccountLinked(ctx context.Context, request *pb.AccountLookupRequest) (response *pb.AccountLookupResponse, err error) {
     return &pb.AccountLookupResponse{
         AccountID: "jared",
     }, nil
 }
 
 
-func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (*pb.AccountDropsResponse, error) {
+func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (*pb.AccountDropsResponse, err error) {
     return &pb.AccountDropsResponse {
 		Item: "noob_weapon",
 	}, nil
