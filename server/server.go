@@ -30,7 +30,7 @@ func (s *Server) IsAccountLinked(ctx context.Context, request *pb.AccountLookupR
 }
 
 
-func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (*pb.AccountDropsResponse, err error) {
+func (s *Server) PushToAccount(ctx context.Context, request *pb.AccountDropsRequest) (response *pb.AccountDropsResponse, err error) {
     return &pb.AccountDropsResponse {
 		Item: "noob_weapon",
 	}, nil
